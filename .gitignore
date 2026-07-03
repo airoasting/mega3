@@ -1,0 +1,10 @@
+# 정부 원본 자료 (배포·공개 제외)
+자료/
+
+# macOS
+.DS_Store
+
+# 로컬 전용 설정
+.claude/settings.local.json
+EVALUATION.md
+.claude/

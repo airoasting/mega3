@@ -1687,6 +1687,7 @@ extraSecs.forEach(function(x){if(x.el)io3.observe(x.el)});
   });
   var gm=document.createElement('div');gm.className='mm-group';gm.textContent='더 보기';menu.appendChild(gm);
   var ab=document.createElement('a');ab.href='#about';ab.textContent='프로젝트 소개';menu.appendChild(ab);
+  var sr=document.createElement('a');sr.href='#sources';sr.textContent='출처';menu.appendChild(sr);
   var mLinks=Array.prototype.slice.call(menu.querySelectorAll('a'));
   function setOpen(open){
     toggle.classList.toggle('open',open);

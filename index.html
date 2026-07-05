@@ -41,7 +41,7 @@ a{color:var(--ink)}
 .brandbar{position:sticky;top:0;z-index:56;background:rgba(240,235,222,.94);backdrop-filter:blur(12px);border-bottom:1.5px solid var(--ink)}
 .brandbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:52px}
 .brandbar .brand-l{display:flex;align-items:center;gap:12px;min-width:0}
-.brand-lockup{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;text-decoration:none;cursor:pointer}
+.brand-lockup{display:inline-flex;align-items:center;gap:8px;flex:0 0 auto;text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .brand-iconwrap{position:relative;display:inline-flex;flex:0 0 auto;border-radius:50%}
 .brand-icon{width:26px;height:26px;display:block;flex:0 0 auto;border-radius:50%;position:relative;z-index:1;transition:transform .7s ease}
 .brand-lockup:hover .brand-icon,.brand-lockup:focus-visible .brand-icon{transform:rotate(360deg)}
@@ -84,7 +84,9 @@ nav a:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
 #bar{position:fixed;top:0;left:0;height:3px;background:var(--ink);width:0;z-index:60}
 
 /* mobile hamburger + drawer */
-.nav-toggle{display:none;flex:0 0 auto;width:38px;height:34px;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:var(--paper);border:1.5px solid var(--ink);border-radius:9px;cursor:pointer;padding:0}
+.nav-toggle{display:none;flex:0 0 auto;width:38px;height:34px;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:var(--paper);border:1.5px solid var(--ink);border-radius:9px;cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}
+.nav-toggle:focus{outline:none}
+.nav-toggle:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
 .nav-toggle span{display:block;width:18px;height:2px;background:var(--ink);transition:transform .25s ease,opacity .2s}
 .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .nav-toggle.open span:nth-child(2){opacity:0}
@@ -577,7 +579,7 @@ nav:not(.mmenu){animation:introUp .7s cubic-bezier(.2,.7,.2,1) both;animation-de
   <p class="hook">'26년 정부 예산(약 728조원)의 <b>6.5배</b>.<br>그러나 역대 대형 국가 프로젝트의 성패를 가른 변수는 투자 규모가 아니라 <b>실행의 완결성</b>이었습니다.</p>
   <p class="spine"><b>관건은 이 투자 계획이 거창한 '발표'에 그치느냐, '실행'까지 이어지느냐입니다.</b></p>
   <div class="meta">반도체 · 피지컬 AI · AI 데이터센터 | 관계부처 합동 발표 원문 기반 팩트 브리핑</div>
-  <div class="colophon">Researched &amp; scored with Claude Fable 5</div>
+  <div class="colophon">Researched &amp; Scored with Claude Fable 5</div>
   <div class="down" aria-hidden="true">↓</div>
 </header>
 

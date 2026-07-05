@@ -112,7 +112,7 @@ nav a:focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
   .nav-toggle{margin-right:8px}
   /* 모바일: 맨 위로(↑) 화살표 숨김, 요약 pill은 코너로 */
   .top{display:none!important}
-  .secpill{right:20px}
+  .secpill{right:24px;max-width:calc(100vw - 48px)}
 }
 @media(max-width:480px){
   /* 헤더 글자 더 줄여 한 줄 유지 */
@@ -475,7 +475,7 @@ footer .note{margin-top:22px;line-height:1.75}
 .top:focus-visible{outline:2px solid var(--ink)}
 .secpill{position:fixed;right:74px;bottom:22px;max-width:calc(100vw - 116px);height:44px;display:flex;align-items:center;gap:7px;background:var(--paper);border:1.5px solid var(--ink);border-radius:999px;padding:0 18px;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--ink);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s,visibility .3s;z-index:40;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .secpill.show{opacity:1;visibility:visible}
-@media (max-width:480px){.secpill{font-size:11px;padding:0 15px;right:18px}}
+@media (max-width:480px){.secpill{font-size:11px;padding:0 15px;right:24px}}
 
 /* ===== 박스 마우스오버 애니메이션 ===== */
 .card,.judge,.thesis,.arc,.finale,.tip-box,.map-detail,.refbox{

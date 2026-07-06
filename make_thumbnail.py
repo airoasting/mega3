@@ -37,8 +37,8 @@ def text(draw, pos, value, fnt, fill=INK, anchor=None, spacing=0):
     draw.text(xy(pos), value, font=fnt, fill=fill, anchor=anchor, spacing=spacing * SCALE)
 
 
-def centered_text(draw, y, value, fnt, fill=INK, spacing=0):
-    text(draw, (640, y), value, fnt, fill=fill, anchor="ma", spacing=spacing)
+def centered_text(draw, y, value, fnt, fill=INK, spacing=0, x=640):
+    text(draw, (x, y), value, fnt, fill=fill, anchor="ma", spacing=spacing)
 
 
 def draw_grid(draw):
@@ -104,7 +104,7 @@ def main():
     centered_text(
         draw,
         96,
-        "BUSINESS LEADER BRIEFING · 2026.6.29 발표 · 7.4 기준 업데이트",
+        "BUSINESS LEADER BRIEFING · 2026.6.29 발표 · 7월 4일 기준 업데이트",
         font(PRETENDARD_MEDIUM, 18),
         fill=INK,
     )
@@ -115,7 +115,7 @@ def main():
     text(draw, (640, 384), "4,755", font(GEORGIA, 128), fill=INK, anchor="mm")
     text(draw, (856, 397), "조원", font(PRETENDARD_BOLD, 40), fill=INK, anchor="lm")
 
-    centered_text(draw, 466, "삼성·SK 국내 투자 발표 계획 합산", font(PRETENDARD_MEDIUM, 25), fill=INK_80)
+    centered_text(draw, 466, "삼성·SK 국내 투자 발표 계획 합산", font(PRETENDARD_MEDIUM, 25), fill=INK_80, x=704)
     centered_text(
         draw,
         540,

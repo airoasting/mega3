@@ -38,6 +38,17 @@ def text(draw, pos, value, fnt, fill=INK, anchor=None, spacing=0):
 
 
 def centered_text(draw, y, value, fnt, fill=INK, spacing=0, x=640):
+    if "\n" in value:
+        draw.multiline_text(
+            xy((x, y)),
+            value,
+            font=fnt,
+            fill=fill,
+            anchor="ma",
+            align="center",
+            spacing=spacing * SCALE,
+        )
+        return
     text(draw, (x, y), value, fnt, fill=fill, anchor="ma", spacing=spacing)
 
 
@@ -115,7 +126,9 @@ def main():
     text(draw, (640, 384), "4,755", font(GEORGIA, 128), fill=INK, anchor="mm")
     text(draw, (856, 397), "조원", font(PRETENDARD_BOLD, 40), fill=INK, anchor="lm")
 
-    centered_text(draw, 466, "삼성·SK 국내 투자 발표 계획 합산", font(PRETENDARD_MEDIUM, 25), fill=INK_80, x=704)
+    page_text_center = 640
+
+    centered_text(draw, 466, "삼성·SK 국내 투자 발표 계획 합산", font(PRETENDARD_MEDIUM, 25), fill=INK_80)
     centered_text(
         draw,
         540,
@@ -123,6 +136,7 @@ def main():
         font(PRETENDARD_REGULAR, 25),
         fill=INK_80,
         spacing=9,
+        x=page_text_center,
     )
     centered_text(
         draw,
@@ -130,8 +144,9 @@ def main():
         "반도체 · 피지컬 AI · AI 데이터센터 | 관계부처 합동 발표 원문 기반 팩트 브리핑",
         font(PRETENDARD_MEDIUM, 18),
         fill=INK_80,
+        x=page_text_center,
     )
-    centered_text(draw, 668, "Researched & Scored with Claude Fable 5", font(PRETENDARD_REGULAR, 15), fill=(31, 43, 224, 115))
+    centered_text(draw, 668, "Researched & Scored with Claude Fable 5", font(PRETENDARD_REGULAR, 15), fill=(31, 43, 224, 115), x=page_text_center)
 
     img = img.resize((1280, 720), Image.Resampling.LANCZOS)
     img.save(OUT, quality=95)
